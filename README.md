@@ -59,7 +59,17 @@ public class AutoLoggingController {
 }
 ```
 
-Calling this controller returns the following headers:
+Calling this controller with this payload:
+
+```json
+{
+  "deviceId": "device123",
+  "locationLat": 84,
+  "locationLon": 120
+}
+```
+
+returns the following headers:
 
 ```text
 diagnostic_id: diag_8a369f55-ace8-4e98-b620-d07c9a65ba10
