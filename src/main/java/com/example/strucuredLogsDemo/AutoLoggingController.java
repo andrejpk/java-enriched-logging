@@ -36,7 +36,8 @@ public class AutoLoggingController {
 		log.info("Auto: Doing an important operation importantValue={}", 123);
 
 		// put the diag id in the response (app level)
-		var response = TelemetrySendResponse.builder().diagnosticId(loggingContext.getDiagnosticId()).build();
+		String diagonsticId = loggingContext.getDiagnosticId();
+		var response = TelemetrySendResponse.builder().diagnosticId(diagonsticId).build();
 
 		return response;
 	}

@@ -23,7 +23,7 @@ public class StructuredLogsConfig implements WebMvcConfigurer
 ...
 ```
 
-[StructuredLogsConfig] demonstrantes using Spring's `CommonsRequestLoggingFilter` to log each request. This may not be a good idea in production, especially with payloads, but shows how to use this tool where it makes sense. (This is indpedant of the other tooling here but follows the theme.) Consider using this or extending it if you'd like to have reqest operations appear in logs (instead of adding log calls at the start of controllers). This is probably not needed in App Insights since it captures requests through its agent's bindings with the JVM and SDKs.
+[StructuredLogsConfig](bin/main/com/example/strucuredLogsDemo/StructuredLogsConfig.class) demonstrantes using Spring's `CommonsRequestLoggingFilter` to log each request. This may not be a good idea in production, especially with payloads, but shows how to use this tool where it makes sense. (This is indpedant of the other tooling here but follows the theme.) Consider using this or extending it if you'd like to have reqest operations appear in logs (instead of adding log calls at the start of controllers). This is probably not needed in App Insights since it captures requests through its agent's bindings with the JVM and SDKs.
 
 ## Using
 
@@ -52,7 +52,8 @@ public class AutoLoggingController {
 		log.info("Auto: Doing an important operation importantValue={}", 123);
 
 		// put the diag id in the response (app level)
-		var response = TelemetrySendResponse.builder().diagnosticId(loggingContext.getDiagnosticId()).build();
+		String diagonsticId = loggingContext.getDiagnosticId();
+		var response = TelemetrySendResponse.builder().diagnosticId(diagonsticId).build();
 
 		return response;
 	}
