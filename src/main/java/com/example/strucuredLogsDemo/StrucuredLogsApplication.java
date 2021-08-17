@@ -1,4 +1,4 @@
-package com.example.strucuredLogs;
+package com.example.strucuredLogsDemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

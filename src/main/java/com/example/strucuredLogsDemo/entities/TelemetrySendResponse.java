@@ -1,4 +1,4 @@
-package com.example.strucuredLogs.entities;
+package com.example.strucuredLogsDemo.entities;
 
 import lombok.Builder;
 import lombok.Data;
@@ -6,5 +6,5 @@ import lombok.Data;
 @Data
 @Builder
 public class TelemetrySendResponse {
-	String correlationId;
+	String diagnosticId;
 }

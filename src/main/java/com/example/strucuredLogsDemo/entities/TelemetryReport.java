@@ -1,4 +1,4 @@
-package com.example.strucuredLogs.entities;
+package com.example.strucuredLogsDemo.entities;
 
 import lombok.Builder;
 import lombok.Data;
